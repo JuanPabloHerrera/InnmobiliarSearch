@@ -142,7 +142,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                 className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[75%] rounded-2xl px-4 py-3 ${
+                  className={`max-w-[75%] rounded-3xl px-4 py-3 ${
                     message.sender === 'user'
                       ? 'bg-gray-900 text-white'
                       : 'bg-gray-100 text-black'
@@ -160,7 +160,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
 
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-gray-100 rounded-2xl px-4 py-3">
+                <div className="bg-gray-100 rounded-3xl px-4 py-3">
                   <div className="flex space-x-1">
                     <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                     <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>

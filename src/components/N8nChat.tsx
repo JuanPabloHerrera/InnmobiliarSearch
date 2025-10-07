@@ -200,7 +200,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Where are you looking for rent or buy?"
+                placeholder="Hi! Lets find you your perfect place!"
                 disabled={isLoading}
                 className="flex-1 bg-transparent outline-none text-black placeholder-gray-400 disabled:opacity-50"
                 style={{ 

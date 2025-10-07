@@ -122,7 +122,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
               <span className="text-sm font-medium text-black" style={{ 
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
                 letterSpacing: '-0.01em'
-              }}>Assistant</span>
+              }}>Online</span>
             </div>
             <button
               onClick={() => setIsOpen(false)}

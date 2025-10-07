@@ -69,40 +69,50 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
       const infoWindow = new google.maps.InfoWindow({
         content: `
           <div style="
-            padding: 16px;
-            min-width: 220px;
-            max-width: 280px;
+            padding: 20px;
+            min-width: 260px;
+            max-width: 320px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
             background: white !important;
-            border-radius: 8px;
+            border-radius: 12px;
             color: #000000 !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           ">
-            <h3 style="
-              margin: 0 0 8px 0 !important;
-              font-size: 16px !important;
-              font-weight: 600 !important;
-              color: #000000 !important;
-              line-height: 1.4 !important;
-              letter-spacing: -0.01em !important;
-              -webkit-text-fill-color: #000000 !important;
-            ">${place.name}</h3>
             <div style="
-              margin-bottom: 8px !important;
-              font-size: 12px !important;
-              font-weight: 500 !important;
-              color: #000000 !important;
-              opacity: 0.6;
-              text-transform: uppercase;
-              letter-spacing: 0.05em !important;
-              -webkit-text-fill-color: #000000 !important;
-            ">${place.category}</div>
+              margin-bottom: 12px !important;
+              padding-bottom: 12px !important;
+              border-bottom: 1px solid hsl(0, 0%, 90%);
+            ">
+              <h3 style="
+                margin: 0 !important;
+                font-size: 18px !important;
+                font-weight: 600 !important;
+                color: #000000 !important;
+                line-height: 1.3 !important;
+                letter-spacing: -0.025em !important;
+                -webkit-text-fill-color: #000000 !important;
+              ">${place.name}</h3>
+            </div>
+            <div style="
+              margin-bottom: 12px !important;
+            ">
+              <span style="
+                display: inline-flex;
+                align-items: center;
+                font-size: 11px !important;
+                font-weight: 500 !important;
+                color: hsl(0, 0%, 45%) !important;
+                text-transform: uppercase;
+                letter-spacing: 0.1em !important;
+                -webkit-text-fill-color: hsl(0, 0%, 45%) !important;
+              ">${place.category}</span>
+            </div>
             <p style="
               margin: 0 !important;
               font-size: 14px !important;
-              line-height: 1.5 !important;
-              color: #000000 !important;
-              opacity: 0.8;
-              -webkit-text-fill-color: #000000 !important;
+              line-height: 1.6 !important;
+              color: hsl(0, 0%, 25%) !important;
+              -webkit-text-fill-color: hsl(0, 0%, 25%) !important;
             ">${place.description}</p>
           </div>
         `

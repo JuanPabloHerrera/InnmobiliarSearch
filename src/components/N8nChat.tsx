@@ -112,9 +112,9 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
 
   return (
     <>
-      {/* Chat Window - appears above input bar */}
+      {/* Chat Window - fullscreen behind input bar */}
       {isOpen && (
-        <div className="fixed bottom-28 left-4 right-4 md:left-auto md:right-4 md:w-[420px] z-40 h-[500px] max-h-[calc(100vh-10rem)] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+        <div className="fixed inset-0 bottom-[100px] z-40 bg-white overflow-hidden flex flex-col">
           {/* Minimalist Header */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
             <div className="flex items-center gap-3">
@@ -135,14 +135,14 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4">
+          <div className="flex-1 overflow-y-auto p-6 space-y-4 max-w-4xl mx-auto w-full">
             {messages.map((message) => (
               <div
                 key={message.id}
                 className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-2xl px-4 py-3 ${
+                  className={`max-w-[75%] rounded-2xl px-4 py-3 ${
                     message.sender === 'user'
                       ? 'bg-gray-900 text-white'
                       : 'bg-gray-100 text-black'
@@ -200,7 +200,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Hi! Lets find you your perfect place!"
+                placeholder="Hola, busquemos el lugar ideal para ti."
                 disabled={isLoading}
                 className="flex-1 bg-transparent outline-none text-black placeholder-gray-400 disabled:opacity-50"
                 style={{ 

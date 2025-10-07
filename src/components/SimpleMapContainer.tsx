@@ -106,13 +106,29 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
               ">${place.category}</span>
             </div>
             <p style="
-              margin: 0 !important;
+              margin: 0 0 12px 0 !important;
               padding: 0 !important;
               font-size: 14px !important;
               line-height: 1.6 !important;
               color: hsl(0, 0%, 25%) !important;
               -webkit-text-fill-color: hsl(0, 0%, 25%) !important;
             ">${place.description}</p>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=${place.latitude},${place.longitude}" 
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                display: inline-block;
+                margin: 0 !important;
+                padding: 0 !important;
+                font-size: 14px !important;
+                font-weight: 500 !important;
+                color: #2563eb !important;
+                -webkit-text-fill-color: #2563eb !important;
+                text-decoration: underline !important;
+                cursor: pointer !important;
+              "
+            >View on Google Maps</a>
           </div>
         `
       })

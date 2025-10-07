@@ -119,7 +119,10 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-sm font-medium text-gray-700">Assistant</span>
+              <span className="text-sm font-medium text-black" style={{ 
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                letterSpacing: '-0.01em'
+              }}>Assistant</span>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -142,10 +145,15 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                   className={`max-w-[85%] rounded-2xl px-4 py-3 ${
                     message.sender === 'user'
                       ? 'bg-gray-900 text-white'
-                      : 'bg-gray-100 text-gray-800'
+                      : 'bg-gray-100 text-black'
                   }`}
                 >
-                  <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.text}</p>
+                  <p className="leading-relaxed whitespace-pre-wrap" style={{ 
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                    fontSize: '14px',
+                    lineHeight: '1.5',
+                    letterSpacing: '-0.01em'
+                  }}>{message.text}</p>
                 </div>
               </div>
             ))}
@@ -194,7 +202,13 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Where are you looking for rent or buy?"
                 disabled={isLoading}
-                className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-400 text-base disabled:opacity-50"
+                className="flex-1 bg-transparent outline-none text-black placeholder-gray-400 disabled:opacity-50"
+                style={{ 
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  letterSpacing: '-0.01em'
+                }}
               />
 
               {/* Send Button - only shows when there's text */}

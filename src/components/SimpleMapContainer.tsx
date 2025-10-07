@@ -72,32 +72,32 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
             padding: 16px;
             min-width: 220px;
             max-width: 280px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
             background: white;
             border-radius: 8px;
           ">
             <h3 style="
-              margin: 0 0 8px 0;
-              font-size: 16px;
-              font-weight: 600;
-              color: #000000;
-              line-height: 1.4;
-              letter-spacing: -0.01em;
+              margin: 0 0 8px 0 !important;
+              font-size: 16px !important;
+              font-weight: 600 !important;
+              color: #000000 !important;
+              line-height: 1.4 !important;
+              letter-spacing: -0.01em !important;
             ">${place.name}</h3>
             <div style="
-              margin-bottom: 8px;
-              font-size: 12px;
-              font-weight: 500;
-              color: #000000;
+              margin-bottom: 8px !important;
+              font-size: 12px !important;
+              font-weight: 500 !important;
+              color: #000000 !important;
               opacity: 0.6;
               text-transform: uppercase;
-              letter-spacing: 0.05em;
+              letter-spacing: 0.05em !important;
             ">${place.category}</div>
             <p style="
-              margin: 0;
-              font-size: 14px;
-              line-height: 1.5;
-              color: #000000;
+              margin: 0 !important;
+              font-size: 14px !important;
+              line-height: 1.5 !important;
+              color: #000000 !important;
               opacity: 0.8;
             ">${place.description}</p>
           </div>

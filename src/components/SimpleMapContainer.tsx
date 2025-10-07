@@ -55,6 +55,7 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
     const map = new google.maps.Map(mapRef.current, {
       center: { lat: 19.4326, lng: -99.1332 },
       zoom: 12,
+      gestureHandling: 'greedy', // Permite arrastrar con un dedo sin el mensaje
     })
 
     // Agregar marcadores

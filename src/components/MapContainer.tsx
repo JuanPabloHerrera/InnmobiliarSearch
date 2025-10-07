@@ -91,6 +91,7 @@ export function MapContainer({ refreshTrigger }: MapContainerProps) {
     const mapInstance = new google.maps.Map(mapRef.current, {
       center: { lat: 19.4326, lng: -99.1332 }, // Ciudad de México
       zoom: 12,
+      gestureHandling: 'greedy', // Permite arrastrar con un dedo sin el mensaje
       styles: [
         {
           featureType: 'poi',

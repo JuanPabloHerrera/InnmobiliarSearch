@@ -111,6 +111,7 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
       const mapInstance = new google.maps.Map(mapRef.current, {
         center: { lat: 19.4326, lng: -99.1332 },
         zoom: 12,
+        gestureHandling: 'greedy', // Permite arrastrar con un dedo sin el mensaje
       })
       
       setMap(mapInstance)

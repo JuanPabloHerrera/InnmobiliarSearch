@@ -136,11 +136,67 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
 
         const infoWindow = new google.maps.InfoWindow({
           content: `
-            <div style="padding: 10px; max-width: 250px;">
-              <h3 style="margin: 0 0 10px 0; font-weight: bold;">${place.name}</h3>
-              <p style="margin: 0 0 5px 0; color: #666;">${place.category}</p>
-              <p style="margin: 0 0 5px 0;">${place.description}</p>
-              ${place.rating ? `<p style="margin: 0; color: #f59e0b;">★ ${place.rating}</p>` : ''}
+            <div style="
+              padding: 0;
+              min-width: 240px;
+              max-width: 280px;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            ">
+              <div style="
+                padding: 16px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: 8px 8px 0 0;
+                margin: -8px -8px 0 -8px;
+              ">
+                <h3 style="
+                  margin: 0;
+                  font-size: 18px;
+                  font-weight: 600;
+                  color: white;
+                  letter-spacing: -0.01em;
+                ">${place.name}</h3>
+              </div>
+              <div style="padding: 16px 16px 12px 16px;">
+                <div style="
+                  display: inline-block;
+                  padding: 4px 10px;
+                  background: #f3f4f6;
+                  border-radius: 12px;
+                  font-size: 12px;
+                  font-weight: 500;
+                  color: #6b7280;
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+                  margin-bottom: 12px;
+                ">${place.category}</div>
+                <p style="
+                  margin: 0;
+                  font-size: 14px;
+                  line-height: 1.6;
+                  color: #374151;
+                ">${place.description}</p>
+                ${place.rating ? `
+                  <div style="
+                    margin-top: 12px;
+                    padding-top: 12px;
+                    border-top: 1px solid #e5e7eb;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                  ">
+                    <span style="color: #fbbf24; font-size: 16px;">★</span>
+                    <span style="
+                      font-size: 15px;
+                      font-weight: 600;
+                      color: #111827;
+                    ">${place.rating}</span>
+                    <span style="
+                      font-size: 13px;
+                      color: #9ca3af;
+                    ">/5</span>
+                  </div>
+                ` : ''}
+              </div>
             </div>
           `
         })

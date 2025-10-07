@@ -134,7 +134,7 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
         border-radius: 50%;
         box-shadow: 0 2px 6px rgba(0,0,0,.3);
         cursor: pointer;
-        margin: 10px 10px 20px 10px;
+        margin: 10px 10px 40px 10px;
         padding: 0;
         width: 44px;
         height: 44px;

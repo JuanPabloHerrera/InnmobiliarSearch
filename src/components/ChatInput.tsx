@@ -62,7 +62,7 @@ export function ChatInput({
               onChange={(e) => setMessage(e.target.value)}
               placeholder={placeholder}
               disabled={isLoading}
-              className="flex-1 py-3 pr-4 bg-transparent outline-none text-gray-700 placeholder-gray-400 disabled:opacity-50"
+              className="flex-1 py-3 pr-4 bg-transparent outline-none text-gray-700 placeholder-gray-400 text-base disabled:opacity-50"
             />
 
             {/* Send Button */}

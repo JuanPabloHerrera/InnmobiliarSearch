@@ -194,7 +194,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Where are you looking for rent or buy?"
                 disabled={isLoading}
-                className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-400 text-sm disabled:opacity-50"
+                className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-400 text-base disabled:opacity-50"
               />
 
               {/* Send Button - only shows when there's text */}

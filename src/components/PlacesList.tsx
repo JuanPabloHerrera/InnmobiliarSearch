@@ -73,7 +73,7 @@ export function PlacesList({ refreshTrigger }: PlacesListProps) {
           placeholder="Buscar lugares..."
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
         />
         
         <select

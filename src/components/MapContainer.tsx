@@ -189,7 +189,7 @@ export function MapContainer({ refreshTrigger }: MapContainerProps) {
             <h3 className="font-semibold text-blue-800 mb-2">Pasos para solucionarlo:</h3>
             <ol className="text-sm text-blue-700 space-y-1">
               <li>1. Ve a <a href="https://console.cloud.google.com/" target="_blank" className="underline">Google Cloud Console</a></li>
-              <li>2. Habilita "Maps JavaScript API"</li>
+              <li>2. Habilita &quot;Maps JavaScript API&quot;</li>
               <li>3. Crea/verifica tu API Key</li>
               <li>4. Actualiza .env.local con tu API Key</li>
               <li>5. Reinicia la aplicación</li>

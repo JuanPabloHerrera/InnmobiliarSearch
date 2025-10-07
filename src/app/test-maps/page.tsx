@@ -137,17 +137,17 @@ export default function TestMaps() {
                   <li>Geocoding API (opcional)</li>
                 </ul>
               </li>
-              <li>Ve a "Credenciales" → "Crear credenciales" → "Clave de API"</li>
+              <li>Ve a &quot;Credenciales&quot; → &quot;Crear credenciales&quot; → &quot;Clave de API&quot;</li>
               <li>
                 <strong>Configura restricciones (recomendado):</strong>
                 <ul className="list-disc list-inside ml-4 mt-1">
-                  <li>Restricciones de aplicación: "Referentes HTTP"</li>
+                  <li>Restricciones de aplicación: &quot;Referentes HTTP&quot;</li>
                   <li>Agrega: localhost:3000/*, tu-dominio.com/*</li>
                   <li>Restricciones de API: Selecciona solo las APIs que necesitas</li>
                 </ul>
               </li>
               <li>Copia la API Key</li>
-              <li>Actualiza .env.local: <code className="bg-gray-100 px-1">NEXT_PUBLIC_GOOGLE_MAPS_API_KEY="tu_clave_aqui"</code></li>
+              <li>Actualiza .env.local: <code className="bg-gray-100 px-1">NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=&quot;tu_clave_aqui&quot;</code></li>
               <li>Reinicia la aplicación: <code className="bg-gray-100 px-1">npm run dev</code></li>
             </ol>
             

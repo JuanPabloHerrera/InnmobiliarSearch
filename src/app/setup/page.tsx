@@ -73,7 +73,7 @@ export default function Setup() {
                     <li>• Places API (opcional)</li>
                     <li>• Geocoding API (opcional)</li>
                   </ul>
-                  <p className="text-sm text-gray-500 mt-1">Ve a "APIs y servicios" → "Biblioteca"</p>
+                  <p className="text-sm text-gray-500 mt-1">Ve a &quot;APIs y servicios&quot; → &quot;Biblioteca&quot;</p>
                 </div>
               </li>
 
@@ -81,7 +81,7 @@ export default function Setup() {
                 <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mr-3">4</span>
                 <div>
                   <p className="font-medium">Crea una API Key</p>
-                  <p className="text-gray-600 text-sm">Ve a "Credenciales" → "Crear credenciales" → "Clave de API"</p>
+                  <p className="text-gray-600 text-sm">Ve a &quot;Credenciales&quot; → &quot;Crear credenciales&quot; → &quot;Clave de API&quot;</p>
                 </div>
               </li>
 
@@ -90,7 +90,7 @@ export default function Setup() {
                 <div>
                   <p className="font-medium">Configura restricciones (recomendado)</p>
                   <ul className="text-gray-600 text-sm mt-1 space-y-1">
-                    <li>• Tipo: "Referentes HTTP"</li>
+                    <li>• Tipo: &quot;Referentes HTTP&quot;</li>
                     <li>• Agrega: <code className="bg-gray-100 px-1">localhost:3000/*</code></li>
                     <li>• Agrega tu dominio de producción</li>
                   </ul>
@@ -102,7 +102,7 @@ export default function Setup() {
                 <div>
                   <p className="font-medium">Actualiza tu archivo .env.local</p>
                   <div className="bg-gray-900 text-green-400 p-3 rounded text-sm font-mono mt-2">
-                    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY="tu_clave_aqui"
+                    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=&quot;tu_clave_aqui&quot;
                   </div>
                 </div>
               </li>

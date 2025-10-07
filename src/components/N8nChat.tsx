@@ -37,7 +37,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
     if (isOpen && messages.length === 0) {
       setMessages([{
         id: 'welcome',
-        text: '¡Hola! 👋 ¿Cómo puedo ayudarte a encontrar tu lugar perfecto?',
+        text: '¡Hola! 👋, busquemos tu lugar ideal.',
         sender: 'bot',
         timestamp: new Date()
       }])
@@ -208,7 +208,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Hola, busquemos el lugar ideal para ti."
+                placeholder="¡Hola! 👋, busquemos tu lugar ideal."
                 disabled={isLoading}
                 className="flex-1 bg-transparent outline-none text-black placeholder-gray-400 disabled:opacity-50"
                 style={{ 

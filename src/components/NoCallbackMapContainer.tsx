@@ -112,7 +112,82 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
         center: { lat: 19.4326, lng: -99.1332 },
         zoom: 12,
         gestureHandling: 'greedy', // Permite arrastrar con un dedo sin el mensaje
+        zoomControl: true,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false,
       })
+      
+      // Crear botón de geolocalización personalizado
+      const locationButton = document.createElement('button')
+      locationButton.textContent = '📍'
+      locationButton.title = 'Go to your location'
+      locationButton.style.cssText = `
+        background-color: #fff;
+        border: 0;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,.3);
+        cursor: pointer;
+        margin: 10px;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+      `
+
+      locationButton.addEventListener('mouseover', () => {
+        locationButton.style.backgroundColor = '#f8f9fa'
+      })
+
+      locationButton.addEventListener('mouseout', () => {
+        locationButton.style.backgroundColor = '#fff'
+      })
+
+      locationButton.addEventListener('click', () => {
+        if (navigator.geolocation) {
+          locationButton.textContent = '⌛'
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              }
+              mapInstance.setCenter(pos)
+              mapInstance.setZoom(15)
+              
+              // Agregar marcador temporal en la ubicación del usuario
+              new google.maps.Marker({
+                position: pos,
+                map: mapInstance,
+                icon: {
+                  path: google.maps.SymbolPath.CIRCLE,
+                  scale: 10,
+                  fillColor: '#4285F4',
+                  fillOpacity: 1,
+                  strokeColor: '#fff',
+                  strokeWeight: 2,
+                },
+                title: 'Your Location',
+              })
+              
+              locationButton.textContent = '📍'
+            },
+            () => {
+              alert('Error: The Geolocation service failed.')
+              locationButton.textContent = '📍'
+            }
+          )
+        } else {
+          alert('Error: Your browser doesn\'t support geolocation.')
+        }
+      })
+
+      // Agregar botón al mapa
+      mapInstance.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(locationButton)
       
       setMap(mapInstance)
 
@@ -141,7 +216,6 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
               max-width: 300px;
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
               color: #000000 !important;
-              text-align: center !important;
             ">
               <div style="
                 margin: 0 0 12px 0 !important;

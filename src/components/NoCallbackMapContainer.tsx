@@ -116,23 +116,27 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
         mapTypeControl: false,
         streetViewControl: false,
         fullscreenControl: false,
+        panControl: false, // Deshabilitar el control de pan (4 flechas)
       })
       
       // Crear botón de geolocalización personalizado
       const locationButton = document.createElement('button')
-      locationButton.textContent = '📍'
+      locationButton.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#666"/>
+        </svg>
+      `
       locationButton.title = 'Go to your location'
       locationButton.style.cssText = `
         background-color: #fff;
         border: 0;
-        border-radius: 12px;
+        border-radius: 50%;
         box-shadow: 0 2px 6px rgba(0,0,0,.3);
         cursor: pointer;
         margin: 10px;
         padding: 0;
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+        width: 44px;
+        height: 44px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -141,15 +145,22 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
 
       locationButton.addEventListener('mouseover', () => {
         locationButton.style.backgroundColor = '#f8f9fa'
+        locationButton.style.transform = 'scale(1.05)'
       })
 
       locationButton.addEventListener('mouseout', () => {
         locationButton.style.backgroundColor = '#fff'
+        locationButton.style.transform = 'scale(1)'
       })
 
       locationButton.addEventListener('click', () => {
         if (navigator.geolocation) {
-          locationButton.textContent = '⌛'
+          locationButton.innerHTML = `
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="#666" stroke-width="2" fill="none" opacity="0.3"/>
+              <circle cx="12" cy="12" r="3" fill="#666"/>
+            </svg>
+          `
           navigator.geolocation.getCurrentPosition(
             (position) => {
               const pos = {
@@ -174,11 +185,19 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
                 title: 'Your Location',
               })
               
-              locationButton.textContent = '📍'
+              locationButton.innerHTML = `
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#666"/>
+                </svg>
+              `
             },
             () => {
               alert('Error: The Geolocation service failed.')
-              locationButton.textContent = '📍'
+              locationButton.innerHTML = `
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#666"/>
+                </svg>
+              `
             }
           )
         } else {

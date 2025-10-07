@@ -71,6 +71,20 @@ body {
   color: #000000 !important;
 }
 
+/* Style links in InfoWindow as blue hyperlinks */
+.gm-style-iw a {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+}
+
+.gm-style-iw a:hover {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+}
+
 /* Hide the "View on Google Maps" link that Google adds */
 .gm-style .gm-style-iw-tc {
   display: none !important;

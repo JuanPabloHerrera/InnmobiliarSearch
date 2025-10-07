@@ -180,7 +180,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
         <div className="max-w-2xl mx-auto pointer-events-auto">
           <form onSubmit={handleSubmit} className="relative">
             <div className="flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-full px-5 py-3 transition-shadow" style={{
-              boxShadow: '0 -4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0,0,0,.3)'
+              boxShadow: '0 -2px 6px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0,0,0,0.08)'
             }}>
               {/* Search Icon */}
               <svg 

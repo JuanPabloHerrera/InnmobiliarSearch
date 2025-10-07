@@ -40,6 +40,8 @@ body {
 .gm-style .gm-style-iw-d {
   overflow: auto !important;
   color: #000000 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .gm-style .gm-style-iw-t::after {
@@ -63,4 +65,10 @@ body {
 /* Hide the "View on Google Maps" link that Google adds */
 .gm-style .gm-style-iw-tc {
   display: none !important;
+}
+
+/* Remove default scrollbar if content fits */
+.gm-style .gm-style-iw-d::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }

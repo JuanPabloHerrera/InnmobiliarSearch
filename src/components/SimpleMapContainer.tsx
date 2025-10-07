@@ -73,8 +73,9 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
             min-width: 220px;
             max-width: 280px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-            background: white;
+            background: white !important;
             border-radius: 8px;
+            color: #000000 !important;
           ">
             <h3 style="
               margin: 0 0 8px 0 !important;
@@ -83,6 +84,7 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
               color: #000000 !important;
               line-height: 1.4 !important;
               letter-spacing: -0.01em !important;
+              -webkit-text-fill-color: #000000 !important;
             ">${place.name}</h3>
             <div style="
               margin-bottom: 8px !important;
@@ -92,6 +94,7 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
               opacity: 0.6;
               text-transform: uppercase;
               letter-spacing: 0.05em !important;
+              -webkit-text-fill-color: #000000 !important;
             ">${place.category}</div>
             <p style="
               margin: 0 !important;
@@ -99,13 +102,18 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
               line-height: 1.5 !important;
               color: #000000 !important;
               opacity: 0.8;
+              -webkit-text-fill-color: #000000 !important;
             ">${place.description}</p>
           </div>
         `
       })
 
       marker.addListener('click', () => {
-        infoWindow.open(map, marker)
+        infoWindow.open({
+          anchor: marker,
+          map: map,
+          shouldFocus: false
+        })
       })
     })
 

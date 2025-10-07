@@ -141,8 +141,9 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
               min-width: 220px;
               max-width: 280px;
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-              background: white;
+              background: white !important;
               border-radius: 8px;
+              color: #000000 !important;
             ">
               <h3 style="
                 margin: 0 0 8px 0 !important;
@@ -151,6 +152,7 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
                 color: #000000 !important;
                 line-height: 1.4 !important;
                 letter-spacing: -0.01em !important;
+                -webkit-text-fill-color: #000000 !important;
               ">${place.name}</h3>
               <div style="
                 margin-bottom: 8px !important;
@@ -160,6 +162,7 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
                 opacity: 0.6;
                 text-transform: uppercase;
                 letter-spacing: 0.05em !important;
+                -webkit-text-fill-color: #000000 !important;
               ">${place.category}</div>
               <p style="
                 margin: 0 !important;
@@ -167,6 +170,7 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
                 line-height: 1.5 !important;
                 color: #000000 !important;
                 opacity: 0.8;
+                -webkit-text-fill-color: #000000 !important;
               ">${place.description}</p>
               ${place.rating ? `
                 <div style="
@@ -176,6 +180,7 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
                   font-size: 14px !important;
                   font-weight: 500 !important;
                   color: #000000 !important;
+                  -webkit-text-fill-color: #000000 !important;
                 ">
                   ★ ${place.rating}/5
                 </div>
@@ -185,7 +190,11 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
         })
 
         marker.addListener('click', () => {
-          infoWindow.open(mapInstance, marker)
+          infoWindow.open({
+            anchor: marker,
+            map: mapInstance,
+            shouldFocus: false
+          })
         })
       })
 

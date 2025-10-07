@@ -44,7 +44,7 @@ export function PlacesList({ refreshTrigger }: PlacesListProps) {
     return matchesText && matchesCategory
   })
 
-  const categories = [...new Set(places.map(place => place.category))].sort()
+  const categories = Array.from(new Set(places.map(place => place.category))).sort()
 
   const formatDate = (date: Date | string) => {
     return new Date(date).toLocaleDateString('es-ES', {

@@ -73,6 +73,7 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
             max-width: 300px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
             color: #000000 !important;
+            text-align: center !important;
           ">
             <div style="
               margin: 0 0 12px 0 !important;

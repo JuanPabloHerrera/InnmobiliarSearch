@@ -69,45 +69,37 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
       const infoWindow = new google.maps.InfoWindow({
         content: `
           <div style="
-            padding: 0;
-            min-width: 240px;
+            padding: 16px;
+            min-width: 220px;
             max-width: 280px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: white;
+            border-radius: 8px;
           ">
+            <h3 style="
+              margin: 0 0 8px 0;
+              font-size: 16px;
+              font-weight: 600;
+              color: #000000;
+              line-height: 1.4;
+              letter-spacing: -0.01em;
+            ">${place.name}</h3>
             <div style="
-              padding: 16px;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              border-radius: 8px 8px 0 0;
-              margin: -8px -8px 0 -8px;
-            ">
-              <h3 style="
-                margin: 0;
-                font-size: 18px;
-                font-weight: 600;
-                color: white;
-                letter-spacing: -0.01em;
-              ">${place.name}</h3>
-            </div>
-            <div style="padding: 16px 16px 12px 16px;">
-              <div style="
-                display: inline-block;
-                padding: 4px 10px;
-                background: #f3f4f6;
-                border-radius: 12px;
-                font-size: 12px;
-                font-weight: 500;
-                color: #6b7280;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                margin-bottom: 12px;
-              ">${place.category}</div>
-              <p style="
-                margin: 0;
-                font-size: 14px;
-                line-height: 1.6;
-                color: #374151;
-              ">${place.description}</p>
-            </div>
+              margin-bottom: 8px;
+              font-size: 12px;
+              font-weight: 500;
+              color: #000000;
+              opacity: 0.6;
+              text-transform: uppercase;
+              letter-spacing: 0.05em;
+            ">${place.category}</div>
+            <p style="
+              margin: 0;
+              font-size: 14px;
+              line-height: 1.5;
+              color: #000000;
+              opacity: 0.8;
+            ">${place.description}</p>
           </div>
         `
       })

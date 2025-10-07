@@ -176,12 +176,12 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
       )}
 
       {/* Always-visible Input Bar at Bottom - transparent, floating on map */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 pb-6 px-4 pointer-events-none" style={{
-        boxShadow: '0 -4px 12px rgba(0, 0, 0, 0.08)'
-      }}>
+      <div className="fixed bottom-0 left-0 right-0 z-50 pb-6 px-4 pointer-events-none">
         <div className="max-w-2xl mx-auto pointer-events-auto">
           <form onSubmit={handleSubmit} className="relative">
-            <div className="flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-full shadow-lg px-5 py-3 hover:shadow-xl transition-shadow">
+            <div className="flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-full px-5 py-3 transition-shadow" style={{
+              boxShadow: '0 -4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0,0,0,.3)'
+            }}>
               {/* Search Icon */}
               <svg 
                 className="w-5 h-5 text-gray-400 flex-shrink-0" 

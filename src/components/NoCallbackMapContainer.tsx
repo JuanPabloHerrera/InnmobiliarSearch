@@ -112,11 +112,11 @@ export function NoCallbackMapContainer({ refreshTrigger, showSidebar }: NoCallba
         center: { lat: 19.4326, lng: -99.1332 },
         zoom: 12,
         gestureHandling: 'greedy', // Permite arrastrar con un dedo sin el mensaje
-        zoomControl: true,
+        zoomControl: false, // Deshabilitar botones de zoom
         mapTypeControl: false,
         streetViewControl: false,
         fullscreenControl: false,
-        panControl: false, // Deshabilitar el control de pan (4 flechas)
+        panControl: false,
       })
       
       // Crear botón de geolocalización personalizado

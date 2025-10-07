@@ -69,54 +69,60 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
       const infoWindow = new google.maps.InfoWindow({
         content: `
           <div style="
-            padding: 20px 20px 20px 20px !important;
+            width: 100%;
             min-width: 260px;
             max-width: 320px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-            background: white !important;
-            border-radius: 12px;
-            color: #000000 !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           ">
             <div style="
-              margin: 0 0 12px 0 !important;
-              padding: 0 0 12px 0 !important;
-              border-bottom: 1px solid hsl(0, 0%, 90%);
+              padding: 20px !important;
+              margin: 0 !important;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+              background: white !important;
+              border-radius: 12px;
+              color: #000000 !important;
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+              box-sizing: border-box !important;
             ">
-              <h3 style="
+              <div style="
+                margin: 0 0 12px 0 !important;
+                padding: 0 0 12px 0 !important;
+                border-bottom: 1px solid hsl(0, 0%, 90%);
+              ">
+                <h3 style="
+                  margin: 0 !important;
+                  padding: 0 !important;
+                  font-size: 18px !important;
+                  font-weight: 600 !important;
+                  color: #000000 !important;
+                  line-height: 1.3 !important;
+                  letter-spacing: -0.025em !important;
+                  -webkit-text-fill-color: #000000 !important;
+                ">${place.name}</h3>
+              </div>
+              <div style="
+                margin: 0 0 12px 0 !important;
+                padding: 0 !important;
+              ">
+                <span style="
+                  display: inline-flex;
+                  align-items: center;
+                  font-size: 11px !important;
+                  font-weight: 500 !important;
+                  color: hsl(0, 0%, 45%) !important;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em !important;
+                  -webkit-text-fill-color: hsl(0, 0%, 45%) !important;
+                ">${place.category}</span>
+              </div>
+              <p style="
                 margin: 0 !important;
                 padding: 0 !important;
-                font-size: 18px !important;
-                font-weight: 600 !important;
-                color: #000000 !important;
-                line-height: 1.3 !important;
-                letter-spacing: -0.025em !important;
-                -webkit-text-fill-color: #000000 !important;
-              ">${place.name}</h3>
+                font-size: 14px !important;
+                line-height: 1.6 !important;
+                color: hsl(0, 0%, 25%) !important;
+                -webkit-text-fill-color: hsl(0, 0%, 25%) !important;
+              ">${place.description}</p>
             </div>
-            <div style="
-              margin: 0 0 12px 0 !important;
-              padding: 0 !important;
-            ">
-              <span style="
-                display: inline-flex;
-                align-items: center;
-                font-size: 11px !important;
-                font-weight: 500 !important;
-                color: hsl(0, 0%, 45%) !important;
-                text-transform: uppercase;
-                letter-spacing: 0.1em !important;
-                -webkit-text-fill-color: hsl(0, 0%, 45%) !important;
-              ">${place.category}</span>
-            </div>
-            <p style="
-              margin: 0 !important;
-              padding: 0 !important;
-              font-size: 14px !important;
-              line-height: 1.6 !important;
-              color: hsl(0, 0%, 25%) !important;
-              -webkit-text-fill-color: hsl(0, 0%, 25%) !important;
-            ">${place.description}</p>
           </div>
         `
       })

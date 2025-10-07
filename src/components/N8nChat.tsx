@@ -37,7 +37,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
     if (isOpen && messages.length === 0) {
       setMessages([{
         id: 'welcome',
-        text: 'Hi there! 👋 How can I help you find your perfect place?',
+        text: '¡Hola! 👋 ¿Cómo puedo ayudarte a encontrar tu lugar perfecto?',
         sender: 'bot',
         timestamp: new Date()
       }])

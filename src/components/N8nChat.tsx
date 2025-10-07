@@ -19,6 +19,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
   const [inputValue, setInputValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [sessionId, setSessionId] = useState<string>('')
+  const [isInputFocused, setIsInputFocused] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   // Generate session ID on mount
@@ -135,7 +136,9 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-6 pb-32 space-y-4 max-w-4xl mx-auto w-full">
+          <div className={`flex-1 overflow-y-auto p-6 space-y-4 max-w-4xl mx-auto w-full transition-all duration-300 ${
+            isInputFocused ? 'pb-[55vh]' : 'pb-32'
+          }`}>
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -176,7 +179,11 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
       )}
 
       {/* Always-visible Input Bar at Bottom - transparent, floating on map */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 pb-6 px-4 pointer-events-none">
+      <div 
+        className={`fixed left-0 right-0 z-50 pb-6 px-4 pointer-events-none transition-all duration-300 ${
+          isInputFocused && isOpen ? 'bottom-[50vh]' : 'bottom-0'
+        }`}
+      >
         <div className="max-w-2xl mx-auto pointer-events-auto">
           <form onSubmit={handleSubmit} className="relative">
             <div className="flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-full px-5 py-3 transition-shadow" style={{
@@ -208,6 +215,8 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
+                onFocus={() => setIsInputFocused(true)}
+                onBlur={() => setIsInputFocused(false)}
                 placeholder="¡Hola! 👋, busquemos tu lugar ideal."
                 disabled={isLoading}
                 className="flex-1 bg-transparent outline-none text-black placeholder-gray-400 disabled:opacity-50"

@@ -114,7 +114,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
     <>
       {/* Chat Window - fullscreen behind input bar */}
       {isOpen && (
-        <div className="fixed inset-0 bottom-[100px] z-40 bg-white overflow-hidden flex flex-col">
+        <div className="fixed inset-0 z-40 bg-white overflow-hidden flex flex-col">
           {/* Minimalist Header */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
             <div className="flex items-center gap-3">
@@ -135,7 +135,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4 max-w-4xl mx-auto w-full">
+          <div className="flex-1 overflow-y-auto p-6 pb-32 space-y-4 max-w-4xl mx-auto w-full">
             {messages.map((message) => (
               <div
                 key={message.id}

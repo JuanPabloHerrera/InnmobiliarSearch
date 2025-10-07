@@ -33,7 +33,7 @@ body {
 
 /* Override Google Maps InfoWindow default styles */
 .gm-style .gm-style-iw-c {
-  padding: 12px 12px 12px 12px !important;
+  padding: 16px 16px 16px 16px !important;
   max-width: none !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
   border-radius: 12px !important;
@@ -45,6 +45,11 @@ body {
   padding: 0 !important;
   margin: 0 !important;
   max-height: none !important;
+}
+
+/* Remove any additional spacing from Google Maps wrapper */
+.gm-style .gm-style-iw.gm-style-iw-c {
+  padding: 16px !important;
 }
 
 .gm-style .gm-style-iw-t::after {

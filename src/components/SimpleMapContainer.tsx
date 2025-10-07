@@ -69,7 +69,7 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
       const infoWindow = new google.maps.InfoWindow({
         content: `
           <div style="
-            padding: 20px;
+            padding: 20px 20px 20px 20px !important;
             min-width: 260px;
             max-width: 320px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
@@ -79,12 +79,13 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           ">
             <div style="
-              margin-bottom: 12px !important;
-              padding-bottom: 12px !important;
+              margin: 0 0 12px 0 !important;
+              padding: 0 0 12px 0 !important;
               border-bottom: 1px solid hsl(0, 0%, 90%);
             ">
               <h3 style="
                 margin: 0 !important;
+                padding: 0 !important;
                 font-size: 18px !important;
                 font-weight: 600 !important;
                 color: #000000 !important;
@@ -94,7 +95,8 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
               ">${place.name}</h3>
             </div>
             <div style="
-              margin-bottom: 12px !important;
+              margin: 0 0 12px 0 !important;
+              padding: 0 !important;
             ">
               <span style="
                 display: inline-flex;
@@ -109,6 +111,7 @@ export function SimpleMapContainer({ refreshTrigger }: SimpleMapContainerProps) 
             </div>
             <p style="
               margin: 0 !important;
+              padding: 0 !important;
               font-size: 14px !important;
               line-height: 1.6 !important;
               color: hsl(0, 0%, 25%) !important;

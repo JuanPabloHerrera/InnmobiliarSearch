@@ -255,7 +255,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                 padding: 12px;
                 background-color: #fafafa;
                 border: 1px solid #e4e4e7;
-                border-radius: 6px;
+                border-radius: 10px;
               ">
                 <div style="
                   font-size: 13px;
@@ -280,7 +280,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   padding: 8px 10px;
                   background-color: #fafafa;
                   border: 1px solid #e4e4e7;
-                  border-radius: 6px;
+                  border-radius: 10px;
                 ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
                     <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zm4.03 6.28a.75.75 0 00-1.06-1.06L4.97 9.47a.75.75 0 000 1.06l2.25 2.25a.75.75 0 001.06-1.06L6.56 10l1.72-1.72zm4.5-1.06a.75.75 0 10-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 101.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25z" clip-rule="evenodd" />
@@ -296,7 +296,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   padding: 8px 10px;
                   background-color: #fafafa;
                   border: 1px solid #e4e4e7;
-                  border-radius: 6px;
+                  border-radius: 10px;
                 ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
                     <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z" />
@@ -312,7 +312,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   padding: 8px 10px;
                   background-color: #fafafa;
                   border: 1px solid #e4e4e7;
-                  border-radius: 6px;
+                  border-radius: 10px;
                 ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
                     <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zM15 5.75a.75.75 0 00-1.5 0v8.5a.75.75 0 001.5 0v-8.5zm-8.5 6a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5zm3.5-3a.75.75 0 00-1.5 0v5.5a.75.75 0 001.5 0v-5.5z" clip-rule="evenodd" />
@@ -328,7 +328,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   padding: 8px 10px;
                   background-color: #fafafa;
                   border: 1px solid #e4e4e7;
-                  border-radius: 6px;
+                  border-radius: 10px;
                 ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
                     <path d="M7 3.5A1.5 1.5 0 018.5 2h3.879a1.5 1.5 0 011.06.44l3.122 3.12A1.5 1.5 0 0117 6.622V12.5a1.5 1.5 0 01-1.5 1.5h-1a1.5 1.5 0 01-3 0h-3a1.5 1.5 0 01-3 0h-1A1.5 1.5 0 013 12.5v-9A1.5 1.5 0 014.5 2H6v1.5a1.5 1.5 0 001 1.415V6.5h2V4.915A1.5 1.5 0 007 3.5z" />
@@ -344,7 +344,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                 padding: 12px;
                 background-color: #fafafa;
                 border: 1px solid #e4e4e7;
-                border-radius: 6px;
+                    border-radius: 10px;
               ">
                 <p style="
                   margin: 0 0 6px 0;
@@ -380,7 +380,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                     font-weight: 400;
                     cursor: pointer;
                     padding: 8px 12px;
-                    border-radius: 6px;
+                    border-radius: 10px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -401,7 +401,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   padding: 12px;
                   background-color: #fafafa;
                   border: 1px solid #e4e4e7;
-                  border-radius: 6px;
+                  border-radius: 10px;
                   max-height: 180px;
                   overflow-y: auto;
                 ">

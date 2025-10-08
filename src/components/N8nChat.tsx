@@ -146,7 +146,7 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                 <div
                   className={`max-w-[75%] rounded-3xl px-4 py-3 ${
                     message.sender === 'user'
-                      ? 'bg-gray-900 text-white'
+                      ? 'bg-gray-700 text-white'
                       : 'bg-gray-100 text-black'
                   }`}
                 >

@@ -84,7 +84,9 @@ export function ChatWindow({ messages, isOpen, onClose, isLoading }: ChatWindowP
               {message.role === 'assistant' && (
                 <p className="text-xs font-semibold text-gray-600 mb-1">Homa Assistant</p>
               )}
-              <div className="text-sm prose prose-sm max-w-none prose-p:my-1 prose-strong:font-bold prose-strong:text-inherit">
+              <div className={`text-sm prose prose-sm max-w-none prose-p:my-1 prose-strong:font-bold ${
+                message.role === 'user' ? 'prose-invert' : ''
+              }`}>
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.content}</ReactMarkdown>
               </div>
               

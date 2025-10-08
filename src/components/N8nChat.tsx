@@ -150,7 +150,9 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                       : 'bg-gray-100 text-black'
                   }`}
                 >
-                  <div className="leading-relaxed prose prose-sm max-w-none prose-p:my-1 prose-strong:font-bold prose-strong:text-inherit" style={{ 
+                  <div className={`leading-relaxed prose prose-sm max-w-none prose-p:my-1 prose-strong:font-bold ${
+                    message.sender === 'user' ? 'prose-invert' : ''
+                  }`} style={{ 
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
                     fontSize: '14px',
                     lineHeight: '1.5',

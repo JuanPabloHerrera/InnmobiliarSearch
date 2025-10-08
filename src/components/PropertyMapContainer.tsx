@@ -213,13 +213,13 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
           title: property.calle,
           icon: {
             url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
-              <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+              <svg width="24" height="24" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 1.5C9.313 1.5 5.5 5.313 5.5 10c0 6 8.5 15 8.5 15s8.5-9 8.5-15c0-4.687-3.813-8.5-8.5-8.5z" fill="#DC2626" stroke="#991B1B" stroke-width="1.5"/>
                 <circle cx="14" cy="10" r="3.5" fill="white"/>
               </svg>
             `),
-            scaledSize: new google.maps.Size(28, 28),
-            anchor: new google.maps.Point(14, 28)
+            scaledSize: new google.maps.Size(24, 24),
+            anchor: new google.maps.Point(12, 24)
           }
         })
 

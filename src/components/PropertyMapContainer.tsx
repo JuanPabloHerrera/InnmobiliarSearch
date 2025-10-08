@@ -258,10 +258,10 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                 border-radius: 6px;
               ">
                 <div style="
-                  font-size: 20px;
-                  font-weight: 600;
+                  font-size: 13px;
+                  font-weight: 700;
                   color: #09090b;
-                  letter-spacing: -0.01em;
+                  line-height: 1.6;
                 ">${property.precio}</div>
               </div>
             ` : ''}

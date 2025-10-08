@@ -282,7 +282,9 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   border: 1px solid #e4e4e7;
                   border-radius: 6px;
                 ">
-                  <span style="font-size: 14px;">📐</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
+                    <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zm4.03 6.28a.75.75 0 00-1.06-1.06L4.97 9.47a.75.75 0 000 1.06l2.25 2.25a.75.75 0 001.06-1.06L6.56 10l1.72-1.72zm4.5-1.06a.75.75 0 10-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 101.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25z" clip-rule="evenodd" />
+                  </svg>
                   <span style="font-size: 13px; color: #09090b; font-weight: 500;">${property.m2} m²</span>
                 </div>
               ` : ''}
@@ -296,7 +298,9 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   border: 1px solid #e4e4e7;
                   border-radius: 6px;
                 ">
-                  <span style="font-size: 14px;">🛏️</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
+                    <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z" />
+                  </svg>
                   <span style="font-size: 13px; color: #09090b; font-weight: 500;">${property.recamaras} rec</span>
                 </div>
               ` : ''}
@@ -310,7 +314,9 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   border: 1px solid #e4e4e7;
                   border-radius: 6px;
                 ">
-                  <span style="font-size: 14px;">🚿</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
+                    <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zM15 5.75a.75.75 0 00-1.5 0v8.5a.75.75 0 001.5 0v-8.5zm-8.5 6a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5zm3.5-3a.75.75 0 00-1.5 0v5.5a.75.75 0 001.5 0v-5.5z" clip-rule="evenodd" />
+                  </svg>
                   <span style="font-size: 13px; color: #09090b; font-weight: 500;">${property.banos} baños</span>
                 </div>
               ` : ''}
@@ -324,7 +330,9 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   border: 1px solid #e4e4e7;
                   border-radius: 6px;
                 ">
-                  <span style="font-size: 14px;">🚗</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
+                    <path d="M7 3.5A1.5 1.5 0 018.5 2h3.879a1.5 1.5 0 011.06.44l3.122 3.12A1.5 1.5 0 0117 6.622V12.5a1.5 1.5 0 01-1.5 1.5h-1a1.5 1.5 0 01-3 0h-3a1.5 1.5 0 01-3 0h-1A1.5 1.5 0 013 12.5v-9A1.5 1.5 0 014.5 2H6v1.5a1.5 1.5 0 001 1.415V6.5h2V4.915A1.5 1.5 0 007 3.5z" />
+                  </svg>
                   <span style="font-size: 13px; color: #09090b; font-weight: 500;">${property.estacionamientos} est</span>
                 </div>
               ` : ''}
@@ -357,12 +365,11 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                 <button 
                   onclick="
                     const desc = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon');
                     const isHidden = desc.style.display === 'none';
                     desc.style.display = isHidden ? 'block' : 'none';
-                    this.style.backgroundColor = isHidden ? '#f4f4f5' : 'transparent';
-                    this.innerHTML = isHidden 
-                      ? '<span style=\\'margin-right: 6px; font-size: 10px;\\'>▼</span>Ocultar descripción'
-                      : '<span style=\\'margin-right: 6px; font-size: 10px;\\'>▶</span>Ver descripción';
+                    icon.style.transform = isHidden ? 'rotate(90deg)' : 'rotate(0deg)';
+                    this.querySelector('.toggle-text').textContent = isHidden ? 'Ocultar' : 'Ver descripción';
                   "
                   style="
                     width: 100%;
@@ -377,12 +384,16 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    gap: 6px;
                     transition: all 0.15s ease;
                   "
                   onmouseover="this.style.backgroundColor='#f4f4f5'"
-                  onmouseout="if(this.nextElementSibling.style.display === 'none') this.style.backgroundColor='transparent'"
+                  onmouseout="this.style.backgroundColor='transparent'"
                 >
-                  <span style="margin-right: 6px; font-size: 10px;">▶</span>Ver descripción
+                  <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 14px; height: 14px; transition: transform 0.2s ease;">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="toggle-text">Ver descripción</span>
                 </button>
                 <div style="
                   display: none;
@@ -391,6 +402,8 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   background-color: #fafafa;
                   border: 1px solid #e4e4e7;
                   border-radius: 6px;
+                  max-height: 180px;
+                  overflow-y: auto;
                 ">
                   <p style="margin: 0; font-size: 12px; color: #52525b; line-height: 1.6;">
                     ${property.descripcion}

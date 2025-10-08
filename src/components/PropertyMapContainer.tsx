@@ -125,7 +125,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
         center: { lat: 19.4326, lng: -99.1332 }, // Mexico City
         zoom: 12,
         gestureHandling: 'greedy',
-        zoomControl: true,
+        zoomControl: false,
         mapTypeControl: false,
         streetViewControl: false,
         fullscreenControl: true,

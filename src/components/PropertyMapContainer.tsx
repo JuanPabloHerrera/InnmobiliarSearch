@@ -253,8 +253,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
               <div style="
                 margin-bottom: 16px;
                 padding: 12px;
-                background-color: #fafafa;
-                border: 1px solid #e4e4e7;
+                background-color: #f5f5f5;
                 border-radius: 10px;
               ">
                 <div style="
@@ -278,8 +277,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   align-items: center;
                   gap: 8px;
                   padding: 8px 10px;
-                  background-color: #fafafa;
-                  border: 1px solid #e4e4e7;
+                  background-color: #f5f5f5;
                   border-radius: 10px;
                 ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
@@ -294,8 +292,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   align-items: center;
                   gap: 8px;
                   padding: 8px 10px;
-                  background-color: #fafafa;
-                  border: 1px solid #e4e4e7;
+                  background-color: #f5f5f5;
                   border-radius: 10px;
                 ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
@@ -310,8 +307,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   align-items: center;
                   gap: 8px;
                   padding: 8px 10px;
-                  background-color: #fafafa;
-                  border: 1px solid #e4e4e7;
+                  background-color: #f5f5f5;
                   border-radius: 10px;
                 ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
@@ -326,8 +322,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   align-items: center;
                   gap: 8px;
                   padding: 8px 10px;
-                  background-color: #fafafa;
-                  border: 1px solid #e4e4e7;
+                  background-color: #f5f5f5;
                   border-radius: 10px;
                 ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
@@ -342,9 +337,8 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
               <div style="
                 margin-bottom: 16px;
                 padding: 12px;
-                background-color: #fafafa;
-                border: 1px solid #e4e4e7;
-                    border-radius: 10px;
+                background-color: #f5f5f5;
+                border-radius: 10px;
               ">
                 <p style="
                   margin: 0 0 6px 0;
@@ -373,8 +367,8 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   "
                   style="
                     width: 100%;
-                    background: transparent;
-                    border: 1px solid #e4e4e7;
+                    background: #f5f5f5;
+                    border: none;
                     color: #52525b;
                     font-size: 13px;
                     font-weight: 400;
@@ -387,8 +381,8 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                     gap: 6px;
                     transition: all 0.15s ease;
                   "
-                  onmouseover="this.style.backgroundColor='#f4f4f5'"
-                  onmouseout="this.style.backgroundColor='transparent'"
+                  onmouseover="this.style.backgroundColor='#e5e5e5'"
+                  onmouseout="this.style.backgroundColor='#f5f5f5'"
                 >
                   <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 14px; height: 14px; transition: transform 0.2s ease;">
                     <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
@@ -399,8 +393,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   display: none;
                   margin-top: 10px;
                   padding: 12px;
-                  background-color: #fafafa;
-                  border: 1px solid #e4e4e7;
+                  background-color: #f5f5f5;
                   border-radius: 10px;
                   max-height: 180px;
                   overflow-y: auto;

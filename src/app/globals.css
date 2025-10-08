@@ -31,19 +31,17 @@ body {
   height: 100vh;
 }
 
-/* Minimalist Google Maps InfoWindow styles */
+/* Override Google Maps InfoWindow default styles */
 .gm-style .gm-style-iw-c {
-  padding: 0px !important;
+  padding: 0px 0px 0px 0px !important;
   max-width: none !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
-  border-radius: 12px !important;
-  border: none !important;
-  background: white !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  border-radius: 20px !important;
 }
 
 .gm-style .gm-style-iw-d {
   overflow: visible !important;
-  color: #09090b !important;
+  color: #000000 !important;
   padding: 0 !important;
   margin: 0 !important;
   max-height: none !important;
@@ -51,7 +49,7 @@ body {
 
 /* Remove any additional spacing from Google Maps wrapper */
 .gm-style .gm-style-iw.gm-style-iw-c {
-  padding: 0 !important;
+  padding: 20px !important;
 }
 
 .gm-style .gm-style-iw-t::after {
@@ -59,37 +57,32 @@ body {
   box-shadow: none !important;
 }
 
-/* Minimalist text colors */
+/* Ensure all text in InfoWindow is black */
 .gm-style-iw * {
-  color: #09090b !important;
+  color: #000000 !important;
 }
 
 .gm-style-iw h3,
 .gm-style-iw h2,
-.gm-style-iw h1 {
-  color: #09090b !important;
-  font-weight: 600 !important;
-}
-
+.gm-style-iw h1,
 .gm-style-iw p,
 .gm-style-iw div,
 .gm-style-iw span {
-  color: #52525b !important;
+  color: #000000 !important;
 }
 
-/* Minimalist link styles */
+/* Style links in InfoWindow as blue hyperlinks */
 .gm-style-iw a {
-  color: #09090b !important;
-  -webkit-text-fill-color: #09090b !important;
-  text-decoration: none !important;
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+  text-decoration: underline !important;
   cursor: pointer !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
 }
 
 .gm-style-iw a:hover {
-  color: #18181b !important;
-  -webkit-text-fill-color: #18181b !important;
-  text-decoration: underline !important;
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
 }
 
 /* Hide the "View on Google Maps" link that Google adds */
@@ -97,37 +90,78 @@ body {
   display: none !important;
 }
 
-/* Clean scrollbar */
+/* Remove default scrollbar if content fits */
 .gm-style .gm-style-iw-d::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 0px;
+  height: 0px;
 }
 
-.gm-style .gm-style-iw-d::-webkit-scrollbar-track {
-  background: #f5f5f5;
-  border-radius: 10px;
-}
-
-.gm-style .gm-style-iw-d::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
-  border-radius: 10px;
-}
-
-.gm-style .gm-style-iw-d::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
-}
-
-/* Minimalist close button */
+/* Force the close button to be properly positioned */
 .gm-ui-hover-effect {
-  top: 8px !important;
-  right: 8px !important;
-  opacity: 0.6 !important;
+  top: 0px !important;
+  right: 0px !important;
 }
 
-.gm-ui-hover-effect:hover {
-  opacity: 1 !important;
+/* Chat markdown styles */
+.prose strong {
+  font-weight: 700;
 }
 
-.gm-ui-hover-effect > span {
-  background-color: #71717a !important;
+.prose p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Ensure markdown text inherits color from parent */
+.prose p,
+.prose strong,
+.prose em,
+.prose code,
+.prose ul,
+.prose ol,
+.prose li {
+  color: inherit;
+}
+
+/* Style lists in markdown */
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Inline code styling */
+.prose code {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+/* Code blocks */
+.prose pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
 }

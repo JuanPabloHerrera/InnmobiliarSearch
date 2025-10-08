@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 export interface ChatMessage {
   id: string
@@ -82,7 +84,9 @@ export function ChatWindow({ messages, isOpen, onClose, isLoading }: ChatWindowP
               {message.role === 'assistant' && (
                 <p className="text-xs font-semibold text-gray-600 mb-1">Homa Assistant</p>
               )}
-              <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+              <div className="text-sm prose prose-sm max-w-none prose-p:my-1 prose-strong:font-bold prose-strong:text-inherit">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.content}</ReactMarkdown>
+              </div>
               
               {/* Render any additional data (like property cards) */}
               {message.data && message.data.properties && (

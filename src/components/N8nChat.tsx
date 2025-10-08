@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 interface Message {
   id: string
@@ -148,12 +150,14 @@ export function N8nChat({ chatUrl }: N8nChatProps) {
                       : 'bg-gray-100 text-black'
                   }`}
                 >
-                  <p className="leading-relaxed whitespace-pre-wrap" style={{ 
+                  <div className="leading-relaxed prose prose-sm max-w-none prose-p:my-1 prose-strong:font-bold prose-strong:text-inherit" style={{ 
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
                     fontSize: '14px',
                     lineHeight: '1.5',
                     letterSpacing: '-0.01em'
-                  }}>{message.text}</p>
+                  }}>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.text}</ReactMarkdown>
+                  </div>
                 </div>
               </div>
             ))}

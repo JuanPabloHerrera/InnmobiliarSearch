@@ -280,8 +280,9 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   background-color: #f5f5f5;
                   border-radius: 10px;
                 ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
-                    <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zm4.03 6.28a.75.75 0 00-1.06-1.06L4.97 9.47a.75.75 0 000 1.06l2.25 2.25a.75.75 0 001.06-1.06L6.56 10l1.72-1.72zm4.5-1.06a.75.75 0 10-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 101.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25z" clip-rule="evenodd" />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 20px; height: 20px; flex-shrink: 0;">
+                    <rect x="1" y="1" width="22" height="22" rx="4" fill="white" stroke="#d4d4d8" stroke-width="1.5"/>
+                    <path d="M12 6L7 10v8h3v-5h4v5h3v-8l-5-4z" fill="#71717a"/>
                   </svg>
                   <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.m2} m²</span>
                 </div>
@@ -295,8 +296,12 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   background-color: #f5f5f5;
                   border-radius: 10px;
                 ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
-                    <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 20px; height: 20px; flex-shrink: 0;">
+                    <rect x="1" y="1" width="22" height="22" rx="4" fill="white" stroke="#d4d4d8" stroke-width="1.5"/>
+                    <rect x="6" y="10" width="12" height="7" rx="1" fill="#71717a"/>
+                    <rect x="5" y="14" width="14" height="2" fill="#71717a"/>
+                    <line x1="6" y1="16" x2="6" y2="19" stroke="#71717a" stroke-width="1.5"/>
+                    <line x1="18" y1="16" x2="18" y2="19" stroke="#71717a" stroke-width="1.5"/>
                   </svg>
                   <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.recamaras} rec</span>
                 </div>
@@ -310,8 +315,11 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   background-color: #f5f5f5;
                   border-radius: 10px;
                 ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
-                    <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zM15 5.75a.75.75 0 00-1.5 0v8.5a.75.75 0 001.5 0v-8.5zm-8.5 6a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5zm3.5-3a.75.75 0 00-1.5 0v5.5a.75.75 0 001.5 0v-5.5z" clip-rule="evenodd" />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 20px; height: 20px; flex-shrink: 0;">
+                    <rect x="1" y="1" width="22" height="22" rx="4" fill="white" stroke="#d4d4d8" stroke-width="1.5"/>
+                    <circle cx="10" cy="8" r="1.5" fill="#71717a"/>
+                    <path d="M10 9.5v3M8 10l2 1.5 2-1.5" stroke="#71717a" stroke-width="1.2" fill="none"/>
+                    <path d="M6 13h12M7 13v4M11 13v4M17 13v4" stroke="#71717a" stroke-width="1.2"/>
                   </svg>
                   <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.banos} baños</span>
                 </div>
@@ -325,8 +333,12 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   background-color: #f5f5f5;
                   border-radius: 10px;
                 ">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 16px; height: 16px; color: #71717a; flex-shrink: 0;">
-                    <path d="M7 3.5A1.5 1.5 0 018.5 2h3.879a1.5 1.5 0 011.06.44l3.122 3.12A1.5 1.5 0 0117 6.622V12.5a1.5 1.5 0 01-1.5 1.5h-1a1.5 1.5 0 01-3 0h-3a1.5 1.5 0 01-3 0h-1A1.5 1.5 0 013 12.5v-9A1.5 1.5 0 014.5 2H6v1.5a1.5 1.5 0 001 1.415V6.5h2V4.915A1.5 1.5 0 007 3.5z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 20px; height: 20px; flex-shrink: 0;">
+                    <rect x="1" y="1" width="22" height="22" rx="4" fill="white" stroke="#d4d4d8" stroke-width="1.5"/>
+                    <path d="M6 10l1-2h10l1 2v6h-2v1.5h-1.5V16h-5v1.5H8V16H6v-6z" fill="#71717a"/>
+                    <circle cx="8.5" cy="13" r="1" fill="white"/>
+                    <circle cx="15.5" cy="13" r="1" fill="white"/>
+                    <rect x="9" y="9" width="6" height="2.5" fill="white" opacity="0.4"/>
                   </svg>
                   <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.estacionamientos} est</span>
                 </div>

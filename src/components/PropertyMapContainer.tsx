@@ -223,14 +223,14 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
           }
         })
 
-        // Create info window content with shadcn-inspired styling
+        // Create info window content with minimalist styling
         const infoContent = `
           <div style="
             min-width: 300px;
             max-width: 360px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: #09090b;
-            padding: 4px;
+            padding: 16px;
           ">
             <div style="margin-bottom: 16px;">
               <h3 style="

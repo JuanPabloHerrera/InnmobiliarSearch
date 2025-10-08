@@ -298,7 +298,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" style="flex-shrink: 0;">
                     <path fill="#71717a" d="M6 6C4.355 6 3 7.355 3 9v6.78c-.61.552-1 1.342-1 2.22v9h5v-2h18v2h5v-9c0-.878-.39-1.668-1-2.22V9c0-1.645-1.355-3-3-3H6zm0 2h20c.555 0 1 .445 1 1v6h-2v-1c0-1.645-1.355-3-3-3h-4c-.767 0-1.467.3-2 .78a2.985 2.985 0 0 0-2-.78h-4c-1.645 0-3 1.355-3 3v1H5V9c0-.555.445-1 1-1zm4 5h4c.555 0 1 .445 1 1v1H9v-1c0-.555.445-1 1-1zm8 0h4c.555 0 1 .445 1 1v1h-6v-1c0-.555.445-1 1-1zM5 17h22c.555 0 1 .445 1 1v7h-1v-2H5v2H4v-7c0-.555.445-1 1-1z"/>
                   </svg>
-                  <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.recamaras} rec</span>
+                  <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.recamaras} ${property.recamaras === '1' ? 'recámara' : 'recámaras'}</span>
                 </div>
               ` : ''}
               ${property.banos ? `
@@ -313,7 +313,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="flex-shrink: 0;">
                     <path fill="#71717a" d="M8 18q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm4 0q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm4 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18ZM5 14v-2q0-2.65 1.7-4.6T11 5.1V3h2v2.1q2.6.35 4.3 2.3T19 12v2H5Zm2-2h10q0-2.075-1.463-3.538T12 7Q9.925 7 8.462 8.463T7 12Zm1 9q-.425 0-.713-.288T7 20q0-.425.288-.713T8 19q.425 0 .713.288T9 20q0 .425-.288.713T8 21Zm4 0q-.425 0-.713-.288T11 20q0-.425.288-.713T12 19q.425 0 .713.288T13 20q0 .425-.288.713T12 21Zm4 0q-.425 0-.713-.288T15 20q0-.425.288-.713T16 19q.425 0 .713.288T17 20q0 .425-.288.713T16 21Zm-4-9Z"/>
                   </svg>
-                  <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.banos} baños</span>
+                  <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.banos} ${property.banos === '1' ? 'baño' : 'baños'}</span>
                 </div>
               ` : ''}
               ${property.estacionamientos ? `
@@ -328,7 +328,7 @@ export function PropertyMapContainer({ refreshTrigger, showSidebar }: PropertyMa
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" style="flex-shrink: 0;">
                     <path fill="#71717a" d="M9.5 6c-1.32 0-2.496.86-2.875 2.125L5.25 12.719l-1.938-.656l-.624 1.874l1.968.657l-.625 2.125A.972.972 0 0 0 4 17v8c0 .55.45 1 1 1h3l.344-1h15.312L24 26h3c.55 0 1-.45 1-1v-.844c.004-.05.004-.105 0-.156v-7a.972.972 0 0 0-.031-.281l-.625-2.125l1.968-.656l-.625-1.876l-1.937.657l-1.375-4.594A2.997 2.997 0 0 0 22.5 6zm0 2h13c.445 0 .84.293.969.719L24.75 13H7.25l1.281-4.281c.13-.43.524-.719.969-.719zm-2.844 7h18.688L26 17.188V23H6v-5.813zM8.5 16a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3zm15 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3zM12 19l-1.25 3h2.156l.438-1h5.312l.438 1h2.156L20 19z"/>
                   </svg>
-                  <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.estacionamientos} est</span>
+                  <span style="font-size: 13px; color: #52525b; line-height: 1.6;">${property.estacionamientos} ${property.estacionamientos === '1' ? 'estacionamiento' : 'estacionamientos'}</span>
                 </div>
               ` : ''}
             </div>

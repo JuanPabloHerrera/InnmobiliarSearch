@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -26,4 +26,32 @@ model Place {
   updatedAt   DateTime @updatedAt
 
   @@map("places")
+}
+
+model Property {
+  id                String   @id @default(cuid())
+  calle             String   // Street
+  colonia           String   // Neighborhood
+  alcaldia          String   // Borough/Municipality
+  precio            String?  // Price (stored as string to handle various formats)
+  m2                String?  // Square meters
+  recamaras         String?  // Bedrooms
+  banos             String?  // Bathrooms
+  estacionamientos  String?  // Parking spots
+  amenidades        String?  // Amenities
+  descripcion       String?  // Description
+  url               String?  // Property URL
+  mantenimiento     String?  // Maintenance fee
+  inmobiliaria      String?  // Real estate agency
+  
+  // Generated/computed fields
+  latitude          Float
+  longitude         Float
+  fullAddress       String   // Complete address for display
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@unique([calle, colonia, alcaldia])
+  @@map("properties")
 }

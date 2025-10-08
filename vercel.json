@@ -1,4 +1,10 @@
 {
-  "buildCommand": "next build"
+  "buildCommand": "next build",
+  "crons": [
+    {
+      "path": "/api/import/sheets",
+      "schedule": "0 2 * * *"
+    }
+  ]
 }
 

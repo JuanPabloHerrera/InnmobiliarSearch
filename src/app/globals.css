@@ -31,17 +31,19 @@ body {
   height: 100vh;
 }
 
-/* Override Google Maps InfoWindow default styles */
+/* Minimalist Google Maps InfoWindow styles */
 .gm-style .gm-style-iw-c {
-  padding: 0px 0px 0px 0px !important;
+  padding: 0px !important;
   max-width: none !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-  border-radius: 20px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  border: none !important;
+  background: white !important;
 }
 
 .gm-style .gm-style-iw-d {
   overflow: visible !important;
-  color: #000000 !important;
+  color: #09090b !important;
   padding: 0 !important;
   margin: 0 !important;
   max-height: none !important;
@@ -49,7 +51,7 @@ body {
 
 /* Remove any additional spacing from Google Maps wrapper */
 .gm-style .gm-style-iw.gm-style-iw-c {
-  padding: 20px !important;
+  padding: 0 !important;
 }
 
 .gm-style .gm-style-iw-t::after {
@@ -57,32 +59,37 @@ body {
   box-shadow: none !important;
 }
 
-/* Ensure all text in InfoWindow is black */
+/* Minimalist text colors */
 .gm-style-iw * {
-  color: #000000 !important;
+  color: #09090b !important;
 }
 
 .gm-style-iw h3,
 .gm-style-iw h2,
-.gm-style-iw h1,
+.gm-style-iw h1 {
+  color: #09090b !important;
+  font-weight: 600 !important;
+}
+
 .gm-style-iw p,
 .gm-style-iw div,
 .gm-style-iw span {
-  color: #000000 !important;
+  color: #52525b !important;
 }
 
-/* Style links in InfoWindow as blue hyperlinks */
+/* Minimalist link styles */
 .gm-style-iw a {
-  color: #2563eb !important;
-  -webkit-text-fill-color: #2563eb !important;
-  text-decoration: underline !important;
+  color: #09090b !important;
+  -webkit-text-fill-color: #09090b !important;
+  text-decoration: none !important;
   cursor: pointer !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
 }
 
 .gm-style-iw a:hover {
-  color: #1d4ed8 !important;
-  -webkit-text-fill-color: #1d4ed8 !important;
+  color: #18181b !important;
+  -webkit-text-fill-color: #18181b !important;
+  text-decoration: underline !important;
 }
 
 /* Hide the "View on Google Maps" link that Google adds */
@@ -90,14 +97,37 @@ body {
   display: none !important;
 }
 
-/* Remove default scrollbar if content fits */
+/* Clean scrollbar */
 .gm-style .gm-style-iw-d::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  width: 4px;
+  height: 4px;
 }
 
-/* Force the close button to be properly positioned */
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 10px;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Minimalist close button */
 .gm-ui-hover-effect {
-  top: 0px !important;
-  right: 0px !important;
+  top: 8px !important;
+  right: 8px !important;
+  opacity: 0.6 !important;
+}
+
+.gm-ui-hover-effect:hover {
+  opacity: 1 !important;
+}
+
+.gm-ui-hover-effect > span {
+  background-color: #71717a !important;
 }
